@@ -26,6 +26,9 @@ The `TestView` demo app has two targets:
 
 - To run on device, you may need to change the Bundle Identifier of the demo application, such as "com.yourcompany.TestView", and choose your own development certificate (Code Signing).
 
+To use SVGKit, uncomment 4 lines about 'TestView-SVG' target in the Podfile.
+
+
 ### Compile without CocoaPods
 
 Alternatively, you can build as one of the following methods:

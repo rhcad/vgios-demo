@@ -1,6 +1,4 @@
 # Type `pod update --no-repo-update` to update repos.
-# Need to copy `https://raw.githubusercontent.com/SVGKit/SVGKit/2.x/SVGKit.podspec`
-# to `~/.cocoapods/repos/master/Specs/SVGKit/2.0/` to use the lastest version of SVGKit.
 
 platform :ios, '6.0'
 
@@ -11,10 +9,14 @@ target 'TestView', :exclusive => true do
     pod 'DemoCmds', :podspec => 'https://raw.githubusercontent.com/touchvg/DemoCmds/develop/ios/DemoCmds.podspec'
 end
 
-target 'TestView-SVG', :exclusive => true do
-    pod 'TouchVG-SVG', :podspec => 'https://raw.githubusercontent.com/touchvg/vgios/develop/podspec/TouchVG-SVG.podspec'
-    pod 'DemoCmds', :podspec => 'https://raw.githubusercontent.com/touchvg/DemoCmds/develop/ios/DemoCmds.podspec'
-end
+# To use SVGKit, uncomment the following 4 lines of target 'TestView-SVG'.
+# Need to copy `https://raw.githubusercontent.com/SVGKit/SVGKit/2.x/SVGKit.podspec`
+# to `~/.cocoapods/repos/master/Specs/SVGKit/2.0/` to use the lastest version of SVGKit.
+
+#target 'TestView-SVG', :exclusive => true do
+#    pod 'TouchVG-SVG', :podspec => 'https://raw.githubusercontent.com/touchvg/vgios/develop/podspec/TouchVG-SVG.podspec'
+#    pod 'DemoCmds', :podspec => 'https://raw.githubusercontent.com/touchvg/DemoCmds/develop/ios/DemoCmds.podspec'
+#end
 
 pre_install do |installer|
   projfile = "TestView/TestView.xcodeproj/project.pbxproj"
