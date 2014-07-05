@@ -110,14 +110,6 @@ static char _lastVgFile[256] = { 0 };
     });
 }
 
-- (void)onPause {
-    if ([[GiViewHelper sharedInstance:self] isPaused]) {
-        [[GiViewHelper sharedInstance] playResume];
-    } else {
-        [[GiViewHelper sharedInstance] playPause];
-    }
-}
-
 - (void)onContentChanged:(id)view {
     GiViewHelper *helper = [GiViewHelper sharedInstance:self];
     
