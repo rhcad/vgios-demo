@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestCanvas/TestCanvas.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../vgios/TouchVG.xcodeproj">
    </FileRef>
    <FileRef
