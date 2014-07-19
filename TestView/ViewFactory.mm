@@ -6,6 +6,7 @@
 #import "GiViewHelper.h"
 #include "DemoCmds.h"
 #import "ARCMacro.h"
+#import "TestDummyView.h"
 
 static UIViewController *_tmpController = nil;
 
@@ -182,6 +183,20 @@ static void testMagnifierView(NSMutableArray *arr, NSUInteger &i, NSUInteger ind
     }
 }
 
+static UIView* addDummyView(NSMutableArray *arr, NSUInteger &i, NSUInteger index,
+                            NSString* title, CGRect frame)
+{
+    UIView *v = nil;
+    
+    if (!arr && index == i++) {
+        v = [[TestDummyView alloc]initWithFrame:frame];
+    }
+    addView(arr, title, v);
+    [v RELEASE];
+    
+    return v;
+}
+
 static void gatherTestView(NSMutableArray *arr, NSUInteger index, CGRect frame)
 {
     NSUInteger i = 0;
@@ -189,32 +204,31 @@ static void gatherTestView(NSMutableArray *arr, NSUInteger index, CGRect frame)
     addGraphView(arr, i, index, @"Empty view", frame, -1);
     addGraphView(arr, i, index, @"GiGraphView1", frame, 0);
     addLargeView1(arr, i, index, @"GiGraphView1 in large view", frame, 0);
-    addGraphView(arr, i, index, @"GiPaintView splines", frame, kSplinesCmd);
-    addGraphView(arr, i, index, @"GiPaintView randShapes splines", frame, kSplinesCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView randShapes line", frame, kLineCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView select", frame, kSelectCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView zoom", frame, kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView line", frame, kLineCmd);
-    addGraphView(arr, i, index, @"GiPaintView lines", frame, kLinesCmd);
-    addGraphView(arr, i, index, @"GiPaintView switch command", frame, kSwitchCmd);
-    addGraphView(arr, i, index, @"GiPaintView switch hittest", frame, kSwitchCmd|kHitTestCmd);
-    addGraphView(arr, i, index, @"GiPaintView record splines", frame, kRecord|kSplinesCmd);
-    addGraphView(arr, i, index, @"GiPaintView record line", frame, kRecord|kLineCmd);
-    addGraphView(arr, i, index, @"GiPaintView record randShapes splines",
-                 frame, kRecord|kSplinesCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView record randShapes line",
-                 frame, kRecord|kLineCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView hittest in democmds", frame, kHitTestCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView add images", frame, kAddImages);
-    addGraphView(arr, i, index, @"GiPaintView load images", frame, kLoadImages);
-    addGraphView(arr, i, index, @"GiPaintView SVG images", frame, kSVGImages);
-    addGraphView(arr, i, index, @"GiPaintView SVG pages", frame, kSVGPages);
-    addGraphView(arr, i, index, @"GiPaintView select randShapes", frame, kSelectCmd|kRandShapes);
-    addGraphView(arr, i, index, @"GiPaintView select loadShapes", frame, kSelectLoad);
-    addLargeView1(arr, i, index, @"GiPaintView in large view", frame, kSplinesCmd);
-    addLargeView1(arr, i, index, @"GiPaintView draw in large view", frame, kLineCmd|kRandShapes);
-    addLargeView1(arr, i, index, @"GiPaintView SVG pages in large view", frame, kSVGPages);
+    addGraphView(arr, i, index, @"splines", frame, kSplinesCmd);
+    addGraphView(arr, i, index, @"randShapes splines", frame, kSplinesCmd|kRandShapes);
+    addGraphView(arr, i, index, @"randShapes line", frame, kLineCmd|kRandShapes);
+    addGraphView(arr, i, index, @"select", frame, kSelectCmd|kRandShapes);
+    addGraphView(arr, i, index, @"zoom", frame, kRandShapes);
+    addGraphView(arr, i, index, @"line", frame, kLineCmd);
+    addGraphView(arr, i, index, @"lines", frame, kLinesCmd);
+    addGraphView(arr, i, index, @"switch command", frame, kSwitchCmd);
+    addGraphView(arr, i, index, @"switch hittest", frame, kSwitchCmd|kHitTestCmd);
+    addGraphView(arr, i, index, @"record splines", frame, kRecord|kSplinesCmd);
+    addGraphView(arr, i, index, @"record line", frame, kRecord|kLineCmd);
+    addGraphView(arr, i, index, @"record randShapes splines", frame, kRecord|kSplinesCmd|kRandShapes);
+    addGraphView(arr, i, index, @"record randShapes line", frame, kRecord|kLineCmd|kRandShapes);
+    addGraphView(arr, i, index, @"hittest in democmds", frame, kHitTestCmd|kRandShapes);
+    addGraphView(arr, i, index, @"add images", frame, kAddImages);
+    addGraphView(arr, i, index, @"load images", frame, kLoadImages);
+    addGraphView(arr, i, index, @"SVG images", frame, kSVGImages);
+    addGraphView(arr, i, index, @"SVG pages", frame, kSVGPages);
+    addGraphView(arr, i, index, @"select randShapes", frame, kSelectCmd|kRandShapes);
+    addGraphView(arr, i, index, @"select loadShapes", frame, kSelectLoad);
+    addLargeView1(arr, i, index, @"in large view", frame, kSplinesCmd);
+    addLargeView1(arr, i, index, @"draw in large view", frame, kLineCmd|kRandShapes);
+    addLargeView1(arr, i, index, @"SVG pages in large view", frame, kSVGPages);
     testMagnifierView(arr, i, index, @"MagnifierView", frame, kSplinesCmd);
+    addDummyView(arr, i, index, @"Dummy view", frame);
 }
 
 void getTestViewTitles(NSMutableArray *arr)

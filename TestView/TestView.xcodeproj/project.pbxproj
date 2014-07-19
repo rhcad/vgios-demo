@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F99BD019795DBA0090667A /* TestDummyView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02F99BCF19795DBA0090667A /* TestDummyView.mm */; };
+		02F99BD119795DBA0090667A /* TestDummyView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02F99BCF19795DBA0090667A /* TestDummyView.mm */; };
 		02FDBE93189DD22A0038C91F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF2D53A160964BA00DDB7F2 /* AppDelegate.m */; };
 		02FDBE94189DD22A0038C91F /* MasterViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEF2D53D160964BA00DDB7F2 /* MasterViewController.mm */; };
 		02FDBE95189DD22A0038C91F /* DetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEF2D540160964BA00DDB7F2 /* DetailViewController.mm */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02F99BCE19795DBA0090667A /* TestDummyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDummyView.h; sourceTree = "<group>"; };
+		02F99BCF19795DBA0090667A /* TestDummyView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestDummyView.mm; sourceTree = "<group>"; };
 		02FDBEAE189DD22A0038C91F /* TestView-SVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestView-SVG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE03795D181FB31E0049931F /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		AE11A5DD18B32D8D00B88366 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -121,6 +125,8 @@
 				AEADC21D16EB570800484962 /* LargeView1.h */,
 				AEADC21E16EB570800484962 /* LargeView1.mm */,
 				AE4E6F0416129337006CAA5C /* ViewFactory.mm */,
+				02F99BCE19795DBA0090667A /* TestDummyView.h */,
+				02F99BCF19795DBA0090667A /* TestDummyView.mm */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				02FDBE97189DD22A0038C91F /* ViewFactory.mm in Sources */,
 				02FDBE98189DD22A0038C91F /* LargeView1.mm in Sources */,
 				02FDBE99189DD22A0038C91F /* CalloutView.m in Sources */,
+				02F99BD119795DBA0090667A /* TestDummyView.mm in Sources */,
 				02FDBE9A189DD22A0038C91F /* GiGraphView1.mm in Sources */,
 				AE3726EF18C9C53200B756C1 /* GiGraphView2.mm in Sources */,
 			);
@@ -321,6 +328,7 @@
 				AE4E6F0616129337006CAA5C /* ViewFactory.mm in Sources */,
 				AEADC21F16EB570800484962 /* LargeView1.mm in Sources */,
 				AE3341B516ECBDBE00F0E517 /* CalloutView.m in Sources */,
+				02F99BD019795DBA0090667A /* TestDummyView.mm in Sources */,
 				AE53750E177D26980050CC4F /* GiGraphView1.mm in Sources */,
 				AE3726EE18C9C53200B756C1 /* GiGraphView2.mm in Sources */,
 			);
