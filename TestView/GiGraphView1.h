@@ -19,9 +19,10 @@ enum kTestFlags {
     kSVGImages  = 9,
     kSVGPages   = 10,
     kCmdMask    = 15,
-    kSwitchCmd  = 16,
-    kRandShapes = 32,
-    kRecord     = 64,
+    kSwitchCmd  = 1 << 4,
+    kRandShapes = 1 << 5,
+    kRecord     = 1 << 6,
+    kCmdParams  = 1 << 7,
 };
 
 //! iOS测试绘图视图类

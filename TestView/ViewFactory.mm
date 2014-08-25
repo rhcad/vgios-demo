@@ -132,6 +132,17 @@ static void testGraphView(GiPaintView *v, int type)
             testSVGPages(v, hlp, path);
             break;
     }
+    
+    if (type & kCmdParams) {
+        hlp.strokeWidth = 3;
+        [hlp setCommand:@"triangle"
+              withParam:@"{'points':[-10,20, 30,-20, -30,-20]}"];
+        
+        hlp.lineStyle = GILineStyleDash;
+        hlp.strokeWidth = 2;
+        [hlp setCommand:@"line"
+              withParam:@"{'points':[-10,20,0,-20, 30,-20,-20,0, -30,-20,10,0]}"];
+    }
 }
 
 static void addLargeView1(NSMutableArray *arr, NSUInteger &i, NSUInteger index,
@@ -218,6 +229,7 @@ static void gatherTestView(NSMutableArray *arr, NSUInteger index, CGRect frame)
     addGraphView(arr, i, index, @"record randShapes splines", frame, kRecord|kSplinesCmd|kRandShapes);
     addGraphView(arr, i, index, @"record randShapes line", frame, kRecord|kLineCmd|kRandShapes);
     addGraphView(arr, i, index, @"hittest in democmds", frame, kHitTestCmd|kRandShapes);
+    addGraphView(arr, i, index, @"command with parameters", frame, kCmdParams|kSelectCmd);
     addGraphView(arr, i, index, @"add images", frame, kAddImages);
     addGraphView(arr, i, index, @"load images", frame, kLoadImages);
     addGraphView(arr, i, index, @"SVG images", frame, kSVGImages);
