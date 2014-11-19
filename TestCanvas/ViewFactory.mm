@@ -63,7 +63,7 @@ static void addGraphView(NSMutableArray *arr, NSUInteger &i, NSUInteger index,
         wrapview.opaque = NO;
     }
     addView(arr, title, wrapview);
-    [wrapview RELEASE];
+    [wrapview RELEASEOBJ];
     if (wrapview) {
         GiGraphView3 *v = [[GiGraphView3 alloc]initWithFrame:wrapview.bounds];
         [wrapview addSubview:v];
@@ -79,6 +79,7 @@ static void gatherTestView(NSMutableArray *arr, NSUInteger index, CGRect frame)
     addView3(arr, i, index, @"testRect", TestCanvas::kRect, frame);
     addView3(arr, i, index, @"testLine", TestCanvas::kLine, frame);
     addView3(arr, i, index, @"testTextAt", TestCanvas::kTextAt, frame);
+    addView3(arr, i, index, @"testRotateText", TestCanvas::kRotateText, frame);
     addView3(arr, i, index, @"testEllipse", TestCanvas::kEllipse, frame);
     addView3(arr, i, index, @"testQuadBezier", TestCanvas::kQuadBezier, frame);
     addView3(arr, i, index, @"testCubicBezier", TestCanvas::kCubicBezier, frame);
@@ -99,6 +100,8 @@ static void gatherTestView(NSMutableArray *arr, NSUInteger index, CGRect frame)
     
     addLargeView3(arr, i, index, @"testTextAt in large view",
                   TestCanvas::kTextAt|kWithLargeView, frame);
+    addLargeView3(arr, i, index, @"testRotateText in large view",
+                  TestCanvas::kRotateText|kWithLargeView, frame);
     addLargeView3(arr, i, index, @"testCubicBezier in large view",
                   TestCanvas::kCubicBezier|kWithLargeView, frame);
     addLargeView3(arr, i, index, @"testHandle in large view",

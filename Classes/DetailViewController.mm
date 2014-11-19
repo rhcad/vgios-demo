@@ -51,7 +51,7 @@
     if (_content) {
         [_content.view removeFromSuperview];
         _content.view = nil;
-        [_content RELEASE];
+        [_content RELEASEOBJ];
     }
     _content = [c RETAIN];
     if (_content) {

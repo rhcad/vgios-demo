@@ -41,7 +41,7 @@ static void testSVGPages(GiPaintView *v, GiViewHelper *hlp, NSString *path)
         imageView.layer.borderColor = [UIColor redColor].CGColor;
         imageView.layer.borderWidth = 2;
         [v addSubview:imageView];
-        [imageView RELEASE];
+        [imageView RELEASEOBJ];
         y += size.height + 2;
         
         [hlp createGraphView:CGRectMake(x, y, size.width, size.height) :v];
@@ -58,8 +58,8 @@ static void testSVGPages(GiPaintView *v, GiViewHelper *hlp, NSString *path)
             imageView.layer.borderColor = [UIColor greenColor].CGColor;
             imageView.layer.borderWidth = 2;
             [v addSubview:imageView];
-            [imageView RELEASE];
-            [image RELEASE];
+            [imageView RELEASEOBJ];
+            [image RELEASEOBJ];
         }
         y += size.height + 2;
         
@@ -93,12 +93,10 @@ static void testGraphView(GiPaintView *v, int type)
             
         case kLineCmd:
             hlp.command = @"line";
-            hlp.lineStyle = GILineStyleDash;
             break;
             
         case kLinesCmd:
             hlp.command = @"lines";
-            hlp.lineStyle = GILineStyleDot;
             hlp.strokeWidth = 5;
             break;
             
@@ -154,7 +152,7 @@ static void addLargeView1(NSMutableArray *arr, NSUInteger &i, NSUInteger index,
         view = [[LargeView1 alloc]initWithFrame:frame withType:type];
     }
     addView(arr, title, view);
-    [view RELEASE];
+    [view RELEASEOBJ];
     
     if (view && type != 0) {
         testGraphView(view.subview2, type);
@@ -177,7 +175,7 @@ static UIView* addGraphView(NSMutableArray *arr, NSUInteger &i, NSUInteger index
         }
     }
     addView(arr, title, v);
-    [v RELEASE];
+    [v RELEASEOBJ];
     
     return v;
 }
@@ -203,7 +201,7 @@ static UIView* addDummyView(NSMutableArray *arr, NSUInteger &i, NSUInteger index
         v = [[TestDummyView alloc]initWithFrame:frame];
     }
     addView(arr, title, v);
-    [v RELEASE];
+    [v RELEASEOBJ];
     
     return v;
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0264EFFB1A1C2F3200DA1EE6 /* libTouchVGCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0264EFF61A1C2F1900DA1EE6 /* libTouchVGCore.a */; };
+		0264EFFC1A1C2F3700DA1EE6 /* libTouchVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0264EFE81A1C2F0000DA1EE6 /* libTouchVG.a */; };
 		02A793AE196808930029EBFD /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02A793AD196808930029EBFD /* TouchVG.bundle */; };
 		AE3341B516ECBDBE00F0E517 /* CalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3341B416ECBDBE00F0E517 /* CalloutView.m */; };
 		AE4E6F0516129337006CAA5C /* GraphView3.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE4E6F0316129337006CAA5C /* GraphView3.mm */; };
@@ -25,7 +27,47 @@
 		AEF2D5B01609BF7D00DDB7F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF2D5AD1609BF7D00DDB7F2 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0264EFE71A1C2F0000DA1EE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0264EFE21A1C2F0000DA1EE6 /* TouchVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE2A3A49178FC511000194AE;
+			remoteInfo = TouchVG;
+		};
+		0264EFE91A1C2F0000DA1EE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0264EFE21A1C2F0000DA1EE6 /* TouchVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 02BD66A8189A1E9A00A4A444;
+			remoteInfo = "TouchVG-SVG";
+		};
+		0264EFF51A1C2F1900DA1EE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0264EFF11A1C2F1900DA1EE6 /* TouchVGCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE490E54185715D9004F70CC;
+			remoteInfo = TouchVGCore;
+		};
+		0264EFF71A1C2F2300DA1EE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0264EFF11A1C2F1900DA1EE6 /* TouchVGCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AE490E53185715D9004F70CC;
+			remoteInfo = TouchVGCore;
+		};
+		0264EFF91A1C2F2900DA1EE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0264EFE21A1C2F0000DA1EE6 /* TouchVG.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AE2A3A48178FC511000194AE;
+			remoteInfo = TouchVG;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0264EFE21A1C2F0000DA1EE6 /* TouchVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TouchVG.xcodeproj; path = ../../vgios/TouchVG.xcodeproj; sourceTree = "<group>"; };
+		0264EFF11A1C2F1900DA1EE6 /* TouchVGCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TouchVGCore.xcodeproj; path = ../../vgcore/ios/TouchVGCore/TouchVGCore.xcodeproj; sourceTree = "<group>"; };
 		02A793AD196808930029EBFD /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TouchVG.bundle; path = ../../vgios/TouchVG.bundle; sourceTree = "<group>"; };
 		AE2F18EB18429B7D000981AD /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		AE3341B316ECBDBE00F0E517 /* CalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutView.h; sourceTree = "<group>"; };
@@ -60,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0264EFFC1A1C2F3700DA1EE6 /* libTouchVG.a in Frameworks */,
+				0264EFFB1A1C2F3200DA1EE6 /* libTouchVGCore.a in Frameworks */,
 				AE815F351718EDCB006BC607 /* QuartzCore.framework in Frameworks */,
 				AEF2D52B160964BA00DDB7F2 /* UIKit.framework in Frameworks */,
 				AEF2D52D160964BA00DDB7F2 /* Foundation.framework in Frameworks */,
@@ -70,9 +114,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0264EFE31A1C2F0000DA1EE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0264EFE81A1C2F0000DA1EE6 /* libTouchVG.a */,
+				0264EFEA1A1C2F0000DA1EE6 /* libTouchVG-SVG.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0264EFF21A1C2F1900DA1EE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0264EFF61A1C2F1900DA1EE6 /* libTouchVGCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AE0762FD160AAE3A00518207 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				0264EFF11A1C2F1900DA1EE6 /* TouchVGCore.xcodeproj */,
+				0264EFE21A1C2F0000DA1EE6 /* TouchVG.xcodeproj */,
 				AE815F321718EA71006BC607 /* BasicAnimationView.m */,
 				AE815F301718E759006BC607 /* BasicAnimationView.h */,
 				AEADC21D16EB570800484962 /* LargeView3.h */,
@@ -167,6 +230,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				0264EFFA1A1C2F2900DA1EE6 /* PBXTargetDependency */,
+				0264EFF81A1C2F2300DA1EE6 /* PBXTargetDependency */,
 			);
 			name = TestCanvas;
 			productName = TestCanvas;
@@ -179,7 +244,7 @@
 		AEF2D51D160964BA00DDB7F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = github.rhcad;
 			};
 			buildConfigurationList = AEF2D520160964BA00DDB7F2 /* Build configuration list for PBXProject "TestCanvas" */;
@@ -192,12 +257,46 @@
 			mainGroup = AEF2D51B160964BA00DDB7F2;
 			productRefGroup = AEF2D527160964BA00DDB7F2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0264EFE31A1C2F0000DA1EE6 /* Products */;
+					ProjectRef = 0264EFE21A1C2F0000DA1EE6 /* TouchVG.xcodeproj */;
+				},
+				{
+					ProductGroup = 0264EFF21A1C2F1900DA1EE6 /* Products */;
+					ProjectRef = 0264EFF11A1C2F1900DA1EE6 /* TouchVGCore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AEF2D525160964BA00DDB7F2 /* TestCanvas */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0264EFE81A1C2F0000DA1EE6 /* libTouchVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTouchVG.a;
+			remoteRef = 0264EFE71A1C2F0000DA1EE6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0264EFEA1A1C2F0000DA1EE6 /* libTouchVG-SVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libTouchVG-SVG.a";
+			remoteRef = 0264EFE91A1C2F0000DA1EE6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0264EFF61A1C2F1900DA1EE6 /* libTouchVGCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTouchVGCore.a;
+			remoteRef = 0264EFF51A1C2F1900DA1EE6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AEF2D524160964BA00DDB7F2 /* Resources */ = {
@@ -231,6 +330,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0264EFF81A1C2F2300DA1EE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TouchVGCore;
+			targetProxy = 0264EFF71A1C2F2300DA1EE6 /* PBXContainerItemProxy */;
+		};
+		0264EFFA1A1C2F2900DA1EE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TouchVG;
+			targetProxy = 0264EFF91A1C2F2900DA1EE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		AEF2D54E160964BA00DDB7F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -259,10 +371,7 @@
 					../../vgios/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					../output,
-				);
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -290,10 +399,6 @@
 					../../vgios/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					../output,
-				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -308,10 +413,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../Classes/Prefix.pch;
 				INFOPLIST_FILE = ../Classes/Info.plist;
-				OTHER_LDFLAGS = (
-					"-lTouchVGCore",
-					"-lTouchVG",
-				);
 				PRODUCT_NAME = TestCanvas;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				WRAPPER_EXTENSION = app;
@@ -324,10 +425,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../Classes/Prefix.pch;
 				INFOPLIST_FILE = ../Classes/Info.plist;
-				OTHER_LDFLAGS = (
-					"-lTouchVGCore",
-					"-lTouchVG",
-				);
 				PRODUCT_NAME = TestCanvas;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				WRAPPER_EXTENSION = app;

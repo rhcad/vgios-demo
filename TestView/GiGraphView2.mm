@@ -51,7 +51,7 @@ static char _lastVgFile[256] = { 0 };
         _pauseBtn.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.8];
         [_pauseBtn setTitleColor:[UIColor blackColor] forState: UIControlStateNormal];
         [self addSubview:_pauseBtn];
-        [_pauseBtn RELEASE];
+        [_pauseBtn RELEASEOBJ];
     }
     else if (_testType & kRecord) {
         [helper startRecord:[path stringByAppendingPathComponent:@"record"]];
@@ -87,7 +87,7 @@ static char _lastVgFile[256] = { 0 };
     [_undoBtn setTitleColor:[UIColor blackColor] forState: UIControlStateHighlighted];
     [_undoBtn addTarget:self action:@selector(undo) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_undoBtn];
-    [_undoBtn RELEASE];
+    [_undoBtn RELEASEOBJ];
     
     _redoBtn = [[UIButton alloc]initWithFrame:CGRectNull];
     _redoBtn.showsTouchWhenHighlighted = YES;
@@ -96,7 +96,7 @@ static char _lastVgFile[256] = { 0 };
     [_redoBtn setTitleColor:[UIColor blackColor] forState: UIControlStateHighlighted];
     [_redoBtn addTarget:self action:@selector(redo) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_redoBtn];
-    [_redoBtn RELEASE];
+    [_redoBtn RELEASEOBJ];
     
     [self layoutButtons];
 }
