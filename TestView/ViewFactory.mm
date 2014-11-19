@@ -102,7 +102,7 @@ static void testGraphView(GiPaintView *v, int type)
             
         case kHitTestCmd:
             DemoCmdsGate::registerCmds([hlp cmdViewHandle]);
-            hlp.command = @"hittest";
+            hlp.command = @"dim_example"; //"hittest";
             if (!(type & kRandShapes)) {
                 [hlp loadFromFile:[GiGraphView2 lastFileName]];
             }
