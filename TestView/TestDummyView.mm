@@ -1,5 +1,5 @@
 // TestDummyView.mm
-// Copyright (c) 2014 Zhang Yungui, https://github.com/touchvg/vgios-demo
+// Copyright (c) 2014 Zhang Yungui, https://github.com/rhcad/vgios-demo
 //
 
 #import "TestDummyView.h"
