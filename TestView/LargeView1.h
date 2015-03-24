@@ -1,5 +1,5 @@
 // LargeView1.h
-// Copyright (c) 2012-2013, https://github.com/rhcad/touchvg
+// Copyright (c) 2012-2015, https://github.com/rhcad/vgios-demo, BSD License
 
 #import <UIKit/UIKit.h>
 

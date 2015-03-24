@@ -6,10 +6,10 @@ This is a unit test and example project for [vgios](https://github.com/rhcad/vgi
 
 ## License
 
-This is an open source [LGPL 2.1](LICENSE.md) licensed project. It uses the following open source projects:
+This is an open source [BSD licensed](LICENSE) project. It uses the following open source projects:
 
-- [vgios](https://github.com/rhcad/vgios) (LGPL): Vector drawing framework for iOS.
-- [vgcore](https://github.com/rhcad/vgcore) (LGPL): Cross-platform vector drawing libraries using C++.
+- [vgios](https://github.com/rhcad/vgios) (BSD): Vector drawing framework for iOS.
+- [vgcore](https://github.com/rhcad/vgcore) (BSD): Cross-platform vector drawing libraries using C++.
 - [SVGKit](https://github.com/SVGKit/SVGKit) (MIT): Display and interact with SVG Images with CoreAnimation on iOS.
 - [DemoCmds](https://github.com/rhcad/DemoCmds): A template and example project containing customized shape and command classes.
 

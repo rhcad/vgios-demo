@@ -1,6 +1,6 @@
 //! \file GiGraphView2.mm
 //! \brief 实现iOS绘图视图类 GiGraphView2
-// Copyright (c) 2012-2013, https://github.com/rhcad/touchvg
+// Copyright (c) 2012-2015, https://github.com/rhcad/vgios-demo, BSD License
 
 #import "GiGraphView1.h"
 #import "GiViewHelper.h"

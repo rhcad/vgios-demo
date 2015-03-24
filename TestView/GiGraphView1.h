@@ -1,6 +1,6 @@
 //! \file GiGraphView1.h
 //! \brief 定义iOS绘图视图类 GiGraphView1
-// Copyright (c) 2012-2013, https://github.com/rhcad/touchvg
+// Copyright (c) 2012-2015, https://github.com/rhcad/vgios-demo, BSD License
 
 #import "GiPaintView.h"
 
