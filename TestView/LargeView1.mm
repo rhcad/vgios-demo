@@ -61,7 +61,8 @@
 }
 
 - (void)removeFromSuperview {
-    [[self viewForZoomingInScrollView:nil] removeFromSuperview];
+    UIView *view = _subview1 ? _subview1.superview : _subview2.superview;
+    [view removeFromSuperview];
     [super removeFromSuperview];
 }
 

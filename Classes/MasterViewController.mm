@@ -21,7 +21,7 @@ UIViewController *createTestView(NSUInteger index, CGRect frame);
         self.title = @"Demos";
         if (!ISPHONE) {
             self.clearsSelectionOnViewWillAppear = NO;
-            self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+            self.preferredContentSize = CGSizeMake(320.0, 600.0);
         }
     }
     return self;
