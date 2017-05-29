@@ -4,7 +4,7 @@ platform :ios, '6.0'
 
 xcodeproj 'TestView/TestView.xcodeproj'
 
-target 'TestView', :exclusive => true do
+target 'TestView' do
     pod 'TouchVG', :podspec => 'https://raw.githubusercontent.com/touchvg/vgios/develop/podspec/TouchVG.podspec'
     pod 'DemoCmds', :podspec => 'https://raw.githubusercontent.com/touchvg/DemoCmds/develop/ios/DemoCmds.podspec'
 end
